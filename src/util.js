@@ -1,5 +1,5 @@
 import dayjs from "dayjs";
-import Week  from "./components/week.js";
+
 
 export function getMonth(month = dayjs().month()) {
   month = Math.floor(month);
