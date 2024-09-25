@@ -7,7 +7,7 @@ import Sidebar from "./components/Sidebar.js";
 import GlobalContext from "./context/GlobalContext.js";
 import EventModal from "./components/EventModal.js";
 import Day from "./components/Day.js";
-import Week from "./components/week.js"; // Import the login page
+import Week from "./components/Week.js"; // Import the login page
 import Month from "./components/Month.js";
 import { getMonth, getWeek, getDay } from "./util.js";
 import dayjs from "dayjs";
