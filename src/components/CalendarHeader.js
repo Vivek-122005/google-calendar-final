@@ -1,11 +1,11 @@
 import dayjs from "dayjs";
 import React, { useContext } from "react";
 import logo from "../assets/logo.png";
-import GlobalContext from "../context/GlobalContext";
+import GlobalContext from "../context/GlobalContext.js";
 import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/clerk-react";
 import { useState } from "react";
-import HelpModal from "./HelpModal";
-import SettingsModal from "./settingmodal";
+import HelpModal from "./HelpModal.js";
+import SettingsModal from "./settingmodal.js";
 
 export default function CalendarHeader({ setViewState }) {
   const { monthIndex, setMonthIndex } = useContext(GlobalContext);

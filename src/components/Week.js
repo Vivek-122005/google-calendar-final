@@ -1,5 +1,5 @@
 import React from "react";
-import Day from "./Day";
+import Day from "./Day.js";
 
 export default function Week({ daysInWeek }) {
   return (

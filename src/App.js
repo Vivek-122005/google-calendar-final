@@ -1,15 +1,15 @@
 import React, { useState, useContext, useEffect } from "react";
 import "./App.css";
 // import { getMonth } from "./util";
-import CalendarHeader from "./components/CalendarHeader";
-import Sidebar from "./components/Sidebar";
+import CalendarHeader from "./components/CalendarHeader.js";
+import Sidebar from "./components/Sidebar.js";
 
-import GlobalContext from "./context/GlobalContext";
-import EventModal from "./components/EventModal";
-import Day from "./components/Day";
-import Week from "./components/week"; // Import the login page
-import Month from "./components/Month";
-import { getMonth, getWeek, getDay } from "./util";
+import GlobalContext from "./context/GlobalContext.js";
+import EventModal from "./components/EventModal.js";
+import Day from "./components/Day.js";
+import Week from "./components/week.js"; // Import the login page
+import Month from "./components/Month.js";
+import { getMonth, getWeek, getDay } from "./util.js";
 import dayjs from "dayjs";
 
 
