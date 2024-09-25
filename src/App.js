@@ -1,15 +1,17 @@
 import React, { useState, useContext, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
-import { getMonth, getWeek, getDay } from "./util";
+// import { getMonth } from "./util";
 import CalendarHeader from "./components/CalendarHeader";
 import Sidebar from "./components/Sidebar";
-import Month from "./components/Month";
+
 import GlobalContext from "./context/GlobalContext";
 import EventModal from "./components/EventModal";
 import Day from "./components/Day";
-import Week from "./components/Week"; // Import the login page
+import Week from "./components/week"; // Import the login page
+import Month from "./components/Month";
+import { getMonth, getWeek, getDay } from "./util";
 import dayjs from "dayjs";
+
 
 function App() {
   const [currentMonth, setCurrentMonth] = useState(getMonth());
@@ -21,9 +23,12 @@ function App() {
       setCurrentMonth(getMonth(monthIndex));
     }
   }, [monthIndex, viewState]);
-
+  
   const currentDay = daySelected || getDay();
   const daysInWeek = getWeek(null, daySelected ? daySelected.month() : dayjs().month());
+
+  
+
 
   return (
     <React.Fragment>
@@ -41,7 +46,6 @@ function App() {
     </React.Fragment>
   );
 }
-
 
 
 export default App;

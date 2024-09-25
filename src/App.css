@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  padding: 0 5vw; /* Use vw units to ensure padding scales with screen size */
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 30vmin; /* Maintain responsive height for logo */
   pointer-events: none;
 }
 
@@ -20,8 +21,60 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(10px + 2vmin); /* Ensure font scales with viewport */
   color: white;
+  padding: 20px;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .App-logo {
+    height: 25vmin; /* Reduce logo size on tablets */
+  }
+
+  .App-header {
+    font-size: calc(8px + 2vmin); /* Slightly smaller font size on tablets */
+    padding: 15px;
+  }
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 480px) {
+  .App-logo {
+    height: 20vmin; /* Smaller logo size for mobile */
+    max-height: 150px; /* Optional max height for better control */
+  }
+
+  .App-header {
+    font-size: calc(8px + 1.5vmin); /* Smaller font size for mobile */
+    padding: 10px;
+    text-align: left; /* Adjust text alignment for better readability */
+    width: 90%; /* Ensure content doesn't touch edges */
+    margin: auto; /* Center the content */
+  }
+
+  .App-link {
+    font-size: 14px; /* Adjust link font size for readability on smaller screens */
+    margin-bottom: 10px; /* Add spacing between links if necessary */
+    display: block; /* Stack links vertically on mobile */
+  }
+}
+
+/* Responsive styles for large screens (e.g., desktops) */
+@media (min-width: 1024px) {
+  .App-header {
+    font-size: calc(12px + 2vmin); /* Larger font size for big screens */
+    padding: 30px;
+    max-width: 1200px; /* Optional max width for large screens */
+    margin: auto; /* Center the header content */
+    text-align: center; /* Ensure header text is centered on larger screens */
+  }
+
+  .App-logo {
+    height: 35vmin; /* Larger logo for bigger screens */
+    max-height: none; /* Remove any max height constraints */
+    margin-bottom: 20px; /* Add spacing below logo if needed */
+  }
 }
 
 .App-link {
@@ -32,10 +85,14 @@
   from {
     transform: rotate(0deg);
   }
-  to {
+  
+to {
     transform: rotate(360deg);
-  }
 }
+
+}
+
+
 /* Base Light Mode Styles */
 body {
   background-color: white;
@@ -152,8 +209,6 @@ body.dark-mode {
   border-color: #4A5568; /* Focus border color */
 }
 
-
-/* styles.css */
 
 .date-button {
   transition: background-color 0.3s ease; /* Smooth transition */

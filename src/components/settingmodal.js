@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
 export default function SettingsModal({ onClose }) {
-  const [darkMode, setDarkMode] = useState(
-    document.body.classList.contains("dark-mode")
-  );
+  // Initialize darkMode state from localStorage
+  const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
     const storedDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(storedDarkMode);
+    
     if (storedDarkMode) {
       document.body.classList.add("dark-mode");
     } else {
@@ -21,10 +21,10 @@ export default function SettingsModal({ onClose }) {
 
     if (isDarkMode) {
       document.body.classList.add("dark-mode");
-      localStorage.setItem('darkMode', 'true');
+      localStorage.setItem("darkMode", "true");
     } else {
       document.body.classList.remove("dark-mode");
-      localStorage.setItem('darkMode', 'false');
+      localStorage.setItem("darkMode", "false");
     }
   }
 
